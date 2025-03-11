@@ -59,74 +59,33 @@
 
                         <div class="col-xl-2 col-lg-3 position-relative">
                             <div class="header-right-wrap mt-40">
+                                <!-- cart start header -->
 
                                 <div class="cart-wrap common-style">
                                     <button class="cart-active">
                                         <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
+                                        <span class="count-style" id="cart-count">0 Items</span>
                                     </button>
                                     <div class="shopping-cart-content">
                                         <div class="shopping-cart-top">
                                             <h4>Your Cart</h4>
                                             <a class="cart-close" href="#"><i class="la la-close"></i></a>
                                         </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                                                </h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
+                                                <a class="black-color" href="cart.html">View Cart</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- cart end header -->
 
                                 <div class="search-wrap common-style ml-25">
                                     <button class="search-active">
@@ -167,73 +126,32 @@
                         </div>
                         <div class="col-6">
                             <div class="header-right-wrap">
+
                                 <div class="cart-wrap common-style">
                                     <button class="cart-active">
                                         <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
+                                        <span class="count-style" id="cart-count">0 Items</span>
                                     </button>
                                     <div class="shopping-cart-content">
                                         <div class="shopping-cart-top">
                                             <h4>Your Cart</h4>
                                             <a class="cart-close" href="#"><i class="la la-close"></i></a>
                                         </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                                                </h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
+                                                <a class="black-color" href="cart.html">View Cart</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="mobile-off-canvas">
                                     <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
                                 </div>
@@ -312,7 +230,8 @@
         </div>
         <!-- header end -->
 
-        <div class="breadcrumb-area bg-img" style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
+        <div class="breadcrumb-area bg-img"
+            style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>About us page</h2>
@@ -338,8 +257,12 @@
                     <div class="col-lg-6 col-md-6 align-self-center">
                         <div class="about-us-content">
                             <h2>Welcome To <span>Daxone</span> Store !</h2>
-                            <p class="peragraph-blog">Daxone Shop is a premium HTML template designed and develoved from the ground up with the sole purpose of helping you create an astonishing, the beautiful and user friendly website that will boost your product’s sales.</p>
-                            <p>The theme design package provides a complete Magento theme set for your online store according to your desired theme. This includes all Magento themes that are required for your online store's successful implementation.</p>
+                            <p class="peragraph-blog">Daxone Shop is a premium HTML template designed and develoved from
+                                the ground up with the sole purpose of helping you create an astonishing, the beautiful
+                                and user friendly website that will boost your product’s sales.</p>
+                            <p>The theme design package provides a complete Magento theme set for your online store
+                                according to your desired theme. This includes all Magento themes that are required for
+                                your online store's successful implementation.</p>
                             <div class="about-us-btn btn-hover hover-border-none">
                                 <a class="btn-color-white btn-color-theme-bg black-color" href="shop.html">Shop now!</a>
                             </div>
@@ -539,7 +462,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="banner-wrap mb-30">
-                            <a href="product-details.html"><img src="assets/images/banner/banner-15.png" alt="banner"></a>
+                            <a href="product-details.html"><img src="assets/images/banner/banner-15.png"
+                                    alt="banner"></a>
                             <div class="banner-content-10">
                                 <h2>MAK PRO GAMMING</h2>
                             </div>
@@ -550,7 +474,8 @@
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <div class="banner-wrap mb-30">
-                            <a href="product-details.html"><img src="assets/images/banner/banner-16.png" alt="banner"></a>
+                            <a href="product-details.html"><img src="assets/images/banner/banner-16.png"
+                                    alt="banner"></a>
                             <div class="banner-content-11">
                                 <h2>35% </h2>
                                 <h3>Discount</h3>
@@ -570,7 +495,9 @@
                 <div class="testimonial-active owl-carousel">
                     <div class="sin-testimonial">
                         <div class="client-content">
-                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat. ”</p>
+                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat.
+                                ”</p>
                         </div>
                         <div class="client-info">
                             <img alt="" src="assets/images/testimonial/client-1.png">
@@ -580,7 +507,9 @@
                     </div>
                     <div class="sin-testimonial">
                         <div class="client-content">
-                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat. ”</p>
+                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat.
+                                ”</p>
                         </div>
                         <div class="client-info">
                             <img alt="" src="assets/images/testimonial/client-2.png">
@@ -590,7 +519,9 @@
                     </div>
                     <div class="sin-testimonial">
                         <div class="client-content">
-                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat. ”</p>
+                            <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laboris consequat.
+                                ”</p>
                         </div>
                         <div class="client-info">
                             <img alt="" src="assets/images/testimonial/client-3.png">
@@ -629,20 +560,26 @@
         </div>
         <div class="subscribe-area pb-100">
             <div class="container">
-                <div class="subscribe-bg bg-img pt-45 pb-50 pl-20 pr-20" style="background-image:url(assets/images/bg/bg-3.jpg);">
+                <div class="subscribe-bg bg-img pt-45 pb-50 pl-20 pr-20"
+                    style="background-image:url(assets/images/bg/bg-3.jpg);">
                     <div class="row">
                         <div class="col-lg-6 ms-auto me-auto">
                             <div class="subscribe-content-3 text-center">
                                 <h2>Sign up & Get all updates.</h2>
                                 <div id="mc_embed_signup" class="subscribe-form-3 mt-20">
-                                    <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
+                                    <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style"
+                                        novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post"
+                                        action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
                                         <div id="mc_embed_signup_scroll" class="mc-form">
-                                            <input class="email" type="email" required="" placeholder="Enter Your E-mail" name="EMAIL" value="">
+                                            <input class="email" type="email" required=""
+                                                placeholder="Enter Your E-mail" name="EMAIL" value="">
                                             <div class="mc-news" aria-hidden="true">
-                                                <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                                <input type="text" value="" tabindex="-1"
+                                                    name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
                                             </div>
                                             <div class="clear">
-                                                <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="">
+                                                <input id="mc-embedded-subscribe" class="button" type="submit"
+                                                    name="subscribe" value="">
                                             </div>
                                         </div>
                                     </form>
@@ -745,6 +682,7 @@
     </div>
     <!-- JS
 ============================================ -->
+    <script src="cart.js"></script>
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>

@@ -59,75 +59,34 @@
 
                         <div class="col-xl-2 col-lg-3 position-relative">
                             <div class="header-right-wrap mt-40">
-
-                                <div class="cart-wrap common-style">
-                                    <button class="cart-active">
-                                        <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
-                                    </button>
-                                    <div class="shopping-cart-content">
-                                        <div class="shopping-cart-top">
-                                            <h4>Your Cart</h4>
-                                            <a class="cart-close" href="#"><i class="la la-close"></i></a>
-                                        </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-bottom">
-                                            <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
-                                            </div>
-                                            <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!-- cart start header -->
+ 
+<div class="cart-wrap common-style">
+    <button class="cart-active">
+        <i class="la la-shopping-cart"></i>
+        <span class="count-style" id="cart-count">0 Items</span>
+    </button>
+    <div class="shopping-cart-content">
+        <div class="shopping-cart-top">
+            <h4>Your Cart</h4>
+            <a class="cart-close" href="#"><i class="la la-close"></i></a>
+        </div>
+        <ul id="cart-items-list">
+            <!-- Cart items will be inserted here dynamically -->
+        </ul>
+        <div class="shopping-cart-bottom">
+            <div class="shopping-cart-total">
+                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                </h4>
+            </div>
+            <div class="shopping-cart-btn btn-hover default-btn text-center">
+                <a class="black-color" href="cart.html">View Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart end header -->
+ 
                                 <div class="search-wrap common-style ml-25">
                                     <button class="search-active">
                                         <i class="la la-search"></i>
@@ -167,73 +126,32 @@
                         </div>
                         <div class="col-6">
                             <div class="header-right-wrap">
+
                                 <div class="cart-wrap common-style">
                                     <button class="cart-active">
                                         <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
+                                        <span class="count-style" id="cart-count">0 Items</span>
                                     </button>
                                     <div class="shopping-cart-content">
                                         <div class="shopping-cart-top">
                                             <h4>Your Cart</h4>
                                             <a class="cart-close" href="#"><i class="la la-close"></i></a>
                                         </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span></h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
+                                                <a class="black-color" href="cart.html">View Cart</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div class="mobile-off-canvas">
                                     <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
                                 </div>
@@ -325,10 +243,9 @@
                 </div>
             </div>
         </div>
+        <!-- check out start -->
         <div class="checkout-main-area pt-90 pb-90">
             <div class="container">
-               
-                
                 <div class="checkout-wrap pt-30">
                     <div class="row">
                         <div class="col-lg-7">
@@ -338,50 +255,37 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="billing-info mb-20">
                                             <label>First Name <abbr class="required" title="required">*</abbr></label>
-                                            <input type="text">
+                                            <input type="text" id="firstName">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="billing-info mb-20">
                                             <label>Last Name <abbr class="required" title="required">*</abbr></label>
-                                            <input type="text">
+                                            <input type="text" id="lastName">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <div class="billing-info mb-20">
                                             <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                            <input type="text">
+                                            <input type="text" id="phone">
                                         </div>
                                     </div>
-                        
                                     <div class="col-lg-12">
                                         <div class="billing-info mb-20">
                                             <label>Street Address <abbr class="required" title="required">*</abbr></label>
-                                            <input class="billing-address" placeholder="House number and street name" type="text">
-                                            <input placeholder="Apartment, suite, unit etc." type="text">
+                                            <input class="billing-address" id="address" placeholder="House number and street name" type="text">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="billing-info mb-20">
                                             <label>Town / City <abbr class="required" title="required">*</abbr></label>
-                                            <input type="text">
+                                            <input type="text" id="city">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="billing-info mb-20">
-                                            <label>State / County <abbr class="required" title="required">*</abbr></label>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                   
                                 </div>
-                               
-                                
                                 <div class="additional-info-wrap">
                                     <label>Order notes</label>
-                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. " name="message"></textarea>
+                                    <textarea id="orderNotes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -395,62 +299,18 @@
                                                 <li>Product <span>Total</span></li>
                                             </ul>
                                         </div>
-                                        <div class="your-order-middle">
-                                            <ul>
-                                                <li>Product Name X 1 <span>$329 </span></li>
-                                                <li>Product Name X 1 <span>$329 </span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="your-order-info order-subtotal">
-                                            <ul>
-                                                <li>Subtotal <span>$329 </span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="your-order-info order-shipping">
-                                            <ul>
-                                                <li>Shipping <p>Enter your full address </p>
-                                                </li>
-                                            </ul>
+                                        <div class="your-order-middle" id="order-summary">
+                                            <!-- Order details will be injected here -->
                                         </div>
                                         <div class="your-order-info order-total">
                                             <ul>
-                                                <li>Total <span>$273.00 </span></li>
+                                                <li>Total <span id="grandTotal">Ksh 0</span></li>
                                             </ul>
-                                        </div>
-                                    </div>
-                                    <div class="payment-method">
-                                        <div class="pay-top sin-payment">
-                                            <input id="payment_method_1" class="input-radio" type="radio" value="cheque" checked="checked" name="payment_method">
-                                            <label for="payment_method_1"> Direct Bank Transfer </label>
-                                            <div class="payment-box payment_method_bacs">
-                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
-                                            </div>
-                                        </div>
-                                        <div class="pay-top sin-payment">
-                                            <input id="payment-method-2" class="input-radio" type="radio" value="cheque" name="payment_method">
-                                            <label for="payment-method-2">Check payments</label>
-                                            <div class="payment-box payment_method_bacs">
-                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
-                                            </div>
-                                        </div>
-                                        <div class="pay-top sin-payment">
-                                            <input id="payment-method-3" class="input-radio" type="radio" value="cheque" name="payment_method">
-                                            <label for="payment-method-3">Cash on delivery </label>
-                                            <div class="payment-box payment_method_bacs">
-                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
-                                            </div>
-                                        </div>
-                                        <div class="pay-top sin-payment sin-payment-3">
-                                            <input id="payment-method-4" class="input-radio" type="radio" value="cheque" name="payment_method">
-                                            <label for="payment-method-4">PayPal <img alt="" src="assets/images/icon-img/payment.png"><a href="#">What is PayPal?</a></label>
-                                            <div class="payment-box payment_method_bacs">
-                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="Place-order mt-40">
-                                    <a href="#">Place Order</a>
+                                    <a href="#" onclick="checkoutWhatsApp()">Place Order</a>
                                 </div>
                             </div>
                         </div>
@@ -458,6 +318,8 @@
                 </div>
             </div>
         </div>
+        <!-- checkout end -->
+
         <footer class="footer-area">
             <div class="footer-top bg-gray pt-120 pb-85">
                 <div class="container">
@@ -550,6 +412,80 @@
     </div>
     <!-- JS
 ============================================ -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbHSGvq3lVc1IT6AHCvqKMsDD-vbx1sqI",
+      authDomain: "iyah-boutique.firebaseapp.com",
+      projectId: "iyah-boutique",
+      storageBucket: "iyah-boutique.appspot.com",
+      messagingSenderId: "255545038422",
+      appId: "1:255545038422:web:fe380a9f65f1cbd6fd0df7"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    
+    // Load Cart Items into Checkout Page
+    function loadCartItems() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let orderSummary = document.getElementById('order-summary');
+        let grandTotal = document.getElementById('grandTotal');
+        
+        orderSummary.innerHTML = '';
+        let totalAmount = 0;
+    
+        cart.forEach((item, index) => {
+            let itemTotal = item.price * item.quantity;
+            totalAmount += itemTotal;
+            orderSummary.innerHTML += `<ul><li>${item.name} x${item.quantity} <span>Ksh ${itemTotal}</span></li></ul>`;
+        });
+        
+        grandTotal.innerText = `Ksh ${totalAmount}`;
+    }
+    
+    document.addEventListener('DOMContentLoaded', loadCartItems);
+    
+    // Checkout via WhatsApp
+    function checkoutWhatsApp() {
+        let firstName = document.getElementById('firstName').value;
+        let lastName = document.getElementById('lastName').value;
+        let phone = document.getElementById('phone').value;
+        let address = document.getElementById('address').value;
+        let city = document.getElementById('city').value;
+        let orderNotes = document.getElementById('orderNotes').value;
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+        
+        let orderDetails = `*Order Details:*
+    `;
+        cart.forEach((item, index) => {
+            orderDetails += `${index + 1}. ${item.name} x${item.quantity} - Ksh ${item.price * item.quantity}\n`;
+        });
+        
+        let totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        orderDetails += `\n*Total: Ksh ${totalAmount}*\n\n`;
+        
+        let customerDetails = `*Customer Details:*
+    Name: ${firstName} ${lastName}\nPhone: ${phone}\nAddress: ${address}, ${city}\nNotes: ${orderNotes}\n\n`;
+        
+        let message = encodeURIComponent(orderDetails + customerDetails);
+        let whatsappNumber = '254715699966'; // Replace with your WhatsApp number
+        
+        window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+        
+        // Clear cart after order
+        localStorage.removeItem('cart');
+    }
+    </script>
+    <script src="cart.js"></script>
+
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>

@@ -1,0 +1,44 @@
+<!-- admin.html - Admin Panel for Managing Products -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+</head>
+<body>
+    <h2>Admin Panel - Manage Products</h2>
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Price" required>
+        <input type="file" id="productImage" required>
+        <button type="submit">Add Product</button>
+    </form>
+    <h3>Product List</h3>
+    <ul id="productList"></ul>
+
+    <script>
+        const firebaseConfig = { /* Your Firebase Config */ };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        const storage = firebase.storage();
+
+        document.getElementById('productForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let name = document.getElementById('productName').value;
+            let price = document.getElementById('productPrice').value;
+            let file = document.getElementById('productImage').files[0];
+
+            let storageRef = storage.ref('products/' + file.name);
+            await storageRef.put(file);
+            let imageUrl = await storageRef.getDownloadURL();
+
+            let newProductRef = db.ref('products').push();
+            newProductRef.set({ name, price, image: imageUrl });
+        });
+    </script>
+</body>
+</html>

@@ -59,75 +59,34 @@
 
                         <div class="col-xl-2 col-lg-3 position-relative">
                             <div class="header-right-wrap mt-40">
-
-                                <div class="cart-wrap common-style">
-                                    <button class="cart-active">
-                                        <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
-                                    </button>
-                                    <div class="shopping-cart-content">
-                                        <div class="shopping-cart-top">
-                                            <h4>Your Cart</h4>
-                                            <a class="cart-close" href="#"><i class="la la-close"></i></a>
-                                        </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-bottom">
-                                            <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
-                                            </div>
-                                            <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!-- cart start header -->
+ 
+<div class="cart-wrap common-style">
+    <button class="cart-active">
+        <i class="la la-shopping-cart"></i>
+        <span class="count-style" id="cart-count">0 Items</span>
+    </button>
+    <div class="shopping-cart-content">
+        <div class="shopping-cart-top">
+            <h4>Your Cart</h4>
+            <a class="cart-close" href="#"><i class="la la-close"></i></a>
+        </div>
+        <ul id="cart-items-list">
+            <!-- Cart items will be inserted here dynamically -->
+        </ul>
+        <div class="shopping-cart-bottom">
+            <div class="shopping-cart-total">
+                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                </h4>
+            </div>
+            <div class="shopping-cart-btn btn-hover default-btn text-center">
+                <a class="black-color" href="cart.html">View Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart end header -->
+ 
                                 <div class="search-wrap common-style ml-25">
                                     <button class="search-active">
                                         <i class="la la-search"></i>
@@ -167,73 +126,31 @@
                         </div>
                         <div class="col-6">
                             <div class="header-right-wrap">
+
                                 <div class="cart-wrap common-style">
                                     <button class="cart-active">
                                         <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
+                                        <span class="count-style" id="cart-count">0 Items</span>
                                     </button>
                                     <div class="shopping-cart-content">
                                         <div class="shopping-cart-top">
                                             <h4>Your Cart</h4>
                                             <a class="cart-close" href="#"><i class="la la-close"></i></a>
                                         </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span></h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
+                                                <a class="black-color" href="cart.html">View Cart</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="mobile-off-canvas">
                                     <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
                                 </div>
@@ -476,6 +393,8 @@
     </div>
     <!-- JS
 ============================================ -->
+<script src="cart.js"></script>
+
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>

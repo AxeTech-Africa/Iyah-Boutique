@@ -59,75 +59,34 @@
 
                         <div class="col-xl-2 col-lg-3 position-relative">
                             <div class="header-right-wrap mt-40">
-
-                                <div class="cart-wrap common-style">
-                                    <button class="cart-active">
-                                        <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
-                                    </button>
-                                    <div class="shopping-cart-content">
-                                        <div class="shopping-cart-top">
-                                            <h4>Your Cart</h4>
-                                            <a class="cart-close" href="#"><i class="la la-close"></i></a>
-                                        </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-bottom">
-                                            <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
-                                            </div>
-                                            <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!-- cart start header -->
+ 
+<div class="cart-wrap common-style">
+    <button class="cart-active">
+        <i class="la la-shopping-cart"></i>
+        <span class="count-style" id="cart-count">0 Items</span>
+    </button>
+    <div class="shopping-cart-content">
+        <div class="shopping-cart-top">
+            <h4>Your Cart</h4>
+            <a class="cart-close" href="#"><i class="la la-close"></i></a>
+        </div>
+        <ul id="cart-items-list">
+            <!-- Cart items will be inserted here dynamically -->
+        </ul>
+        <div class="shopping-cart-bottom">
+            <div class="shopping-cart-total">
+                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                </h4>
+            </div>
+            <div class="shopping-cart-btn btn-hover default-btn text-center">
+                <a class="black-color" href="cart.html">View Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart start header -->
+ 
                                 <div class="search-wrap common-style ml-25">
                                     <button class="search-active">
                                         <i class="la la-search"></i>
@@ -167,73 +126,32 @@
                         </div>
                         <div class="col-6">
                             <div class="header-right-wrap">
+
                                 <div class="cart-wrap common-style">
                                     <button class="cart-active">
                                         <i class="la la-shopping-cart"></i>
-                                        <span class="count-style">2 Items</span>
+                                        <span class="count-style" id="cart-count">0 Items</span>
                                     </button>
                                     <div class="shopping-cart-content">
                                         <div class="shopping-cart-top">
                                             <h4>Your Cart</h4>
                                             <a class="cart-close" href="#"><i class="la la-close"></i></a>
                                         </div>
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-1.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-2.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/images/cart/cart-3.jpg"></a>
-                                                    <div class="item-close">
-                                                        <a href="#"><i class="sli sli-close"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Golden Easy Spot Chair.</a></h4>
-                                                    <span>$99.00</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="la la-trash"></i></a>
-                                                </div>
-                                            </li>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total">$290.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span></h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
-                                                <a class="black-color" href="checkout.html">Continue to Chackout</a>
+                                                <a class="black-color" href="cart.html">View Cart</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div class="mobile-off-canvas">
                                     <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
                                 </div>
@@ -312,7 +230,8 @@
         </div>
         <!-- header end -->
 
-        <div class="breadcrumb-area bg-img" style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
+        <div class="breadcrumb-area bg-img"
+            style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>Product details</h2>
@@ -325,61 +244,57 @@
                 </div>
             </div>
         </div>
+        <!-- product details start -->
         <div class="product-details-area pt-90 pb-90">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="product-details-img-left">
-                            <img class="zoompro" src="assets/images/product-details/pro-details-1.jpg" data-zoom-image="assets/images/product-details/product-detalis-bl1.jpg" alt="product-details-img">
+                            <img id="product-image" class="zoompro" src=""
+                                data-zoom-image="" alt="product-details-img">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="product-details-content pro-details-content-modify">
-                            <span>Life Style</span>
-                            <h2>LaaVista Depro, FX 829 v1</h2>
-                           
-                            <div class="pro-details-color-wrap">
-                                <span>Color:</span>
-                                <div class="pro-details-color-content">
-                                    <ul>
-                                        <li class="green"></li>
-                                        <li class="yellow"></li>
-                                        <li class="red"></li>
-                                        <li class="blue"></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <span id="product-category"></span>
+                            <h2 id="product-name"></h2>
+        
                             <div class="pro-details-size">
                                 <span>Size:</span>
                                 <div class="pro-details-size-content">
                                     <ul>
-                                        <li><a href="#">s</a></li>
-                                        <li><a href="#">m</a></li>
-                                        <li><a href="#">xl</a></li>
-                                        <li><a href="#">xxl</a></li>
+                                        <li><a href="#">S</a></li>
+                                        <li><a href="#">M</a></li>
+                                        <li><a href="#">XL</a></li>
+                                        <li><a href="#">XXL</a></li>
                                     </ul>
                                 </div>
                             </div>
+        
                             <div class="pro-details-price-wrap">
                                 <div class="product-price">
-                                    <span>Ksh2100.00</span>
-                                    <span class="old">ksh2300.00</span>
+                                    <span id="product-price"></span>
+                                    <span id="product-old-price" class="old"></span>
                                 </div>
                             </div>
+        
+                            <div id="stock-status"></div> <!-- STOCK STATUS WILL BE UPDATED HERE -->
+        
                             <div class="pro-details-quality">
                                 <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1">
                                 </div>
                             </div>
-                          
-                            <div class="pro-details-buy-now btn-hover btn-hover-radious">
-                                <a href="#">Add To Cart</a>
+        
+                            <div id="add-to-cart-container" class="pro-details-buy-now btn-hover btn-hover-radious">
+                                <a href="#" id="add-to-cart">Add To Cart</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="description-review-wrapper pb-90">
             <div class="container">
                 <div class="row">
@@ -391,7 +306,7 @@
                         <div class="tab-content dec-review-bottom">
                             <div id="des-details1" class="tab-pane">
                                 <div class="description-wrap">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                    <p id="product-description"></p>
                                 </div>
                             </div>
                             <div id="des-details2" class="tab-pane active">
@@ -399,54 +314,29 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td class="width1">Name / Model</td>
-                                                <td>LaaVista Depro, FX 829 v1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type</td>
-                                                <td>Categories</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="width1">Models</td>
-                                                <td>FX 829 v1</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="width1">Categories</td>
-                                                <td>Product Type</td>
+                                                <td class="width1">Name</td>
+                                                <td id="product-spec-name"></td>
                                             </tr>
                                             <tr>
                                                 <td class="width1">Size</td>
-                                                <td>60’’ x 40’’</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="width1">Display Port</td>
-                                                <td>Multi</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="width1">Media</td>
-                                                <td>Brightside</td>
+                                                <td id="product-spec-size"></td>
                                             </tr>
                                             <tr>
                                                 <td class="width1">Color</td>
-                                                <td>Black, White</td>
+                                                <td id="product-spec-color"></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-
-                           
-
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-       
+        <!-- product details end -->
+
 
 
         <footer class="footer-area">
@@ -539,11 +429,12 @@
             </div>
         </footer>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true"></span></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -562,44 +453,14 @@
                                         <img src="assets/images/product/quickview-l2.jpg" alt="">
                                     </div>
                                 </div>
-                                <!-- Thumbnail Large Image End -->
-                                <!-- Thumbnail Image End -->
-                                <div class="quickview-wrap mt-15">
-                                    <div class="quickview-slide-active owl-carousel nav nav-style-2" role="tablist">
-                                        <a class="active" data-bs-toggle="tab" href="#pro-1"><img src="assets/images/product/quickview-s1.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-2"><img src="assets/images/product/quickview-s2.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-3"><img src="assets/images/product/quickview-s3.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-4"><img src="assets/images/product/quickview-s4.jpg" alt=""></a>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="col-md-7 col-sm-12 col-xs-12">
                                 <div class="product-details-content quickview-content">
-                                    <span>Life Style</span>
-                                    <h2>LaaVista Depro, FX 829 v1</h2>
-                                    <div class="product-ratting-review">
-                                        <div class="product-ratting">
-                                            <i class="la la-star"></i>
-                                            <i class="la la-star"></i>
-                                            <i class="la la-star"></i>
-                                            <i class="la la-star"></i>
-                                            <i class="la la-star-half-o"></i>
-                                        </div>
-                                        <div class="product-review">
-                                            <span>40+ Reviews</span>
-                                        </div>
-                                    </div>
-                                    <div class="pro-details-color-wrap">
-                                        <span>Color:</span>
-                                        <div class="pro-details-color-content">
-                                            <ul>
-                                                <li class="green"></li>
-                                                <li class="yellow"></li>
-                                                <li class="red"></li>
-                                                <li class="blue"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <span>Abaya</span>
+                                    <h2>Green colred beutiful abaya</h2>
+
+
                                     <div class="pro-details-size">
                                         <span>Size:</span>
                                         <div class="pro-details-size-content">
@@ -613,24 +474,16 @@
                                     </div>
                                     <div class="pro-details-price-wrap">
                                         <div class="product-price">
-                                            <span>$210.00</span>
-                                            <span class="old">$230.00</span>
+                                            <span>Ksh 210.00</span>
+                                            <span class="old">Ksh 230.00</span>
                                         </div>
-                                        <div class="dec-rang"><span>- 30%</span></div>
                                     </div>
                                     <div class="pro-details-quality">
                                         <div class="cart-plus-minus">
                                             <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
                                         </div>
                                     </div>
-                                    <div class="pro-details-compare-wishlist">
-                                        <div class="pro-details-compare">
-                                            <a title="Add To Compare" href="#"><i class="la la-retweet"></i> Compare</a>
-                                        </div>
-                                        <div class="pro-details-wishlist">
-                                            <a title="Add To Wishlist" href="#"><i class="la la-heart-o"></i> Add to wish list</a>
-                                        </div>
-                                    </div>
+
                                     <div class="pro-details-buy-now btn-hover btn-hover-radious">
                                         <a href="#">Add To Cart</a>
                                     </div>
@@ -640,11 +493,71 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Modal end -->
     </div>
     <!-- JS
 ============================================ -->
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+
+    if (!productId) {
+        alert("No product ID found!");
+        return;
+    }
+
+    fetch("products.json")
+        .then(response => response.json())
+        .then(products => {
+            const product = products.find(p => p.id == productId);
+            if (!product) {
+                alert("Product not found!");
+                return;
+            }
+
+            // Update product details dynamically
+            document.getElementById("product-image").src = product.image;
+            document.getElementById("product-image").setAttribute("data-zoom-image", product.image);
+            document.getElementById("product-category").textContent = product.category;
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-price").textContent = `Ksh ${product.price}`;
+            document.getElementById("product-old-price").textContent = product.oldPrice ? `Ksh ${product.oldPrice}` : "";
+            document.getElementById("product-description").textContent = product.description;
+
+            // Update specification details
+            document.getElementById("product-spec-name").textContent = product.name;
+            document.getElementById("product-spec-size").textContent = product.size;
+            document.getElementById("product-spec-color").textContent = product.color;
+
+            // Handle stock status
+            if (!product.stock) {
+                document.getElementById("stock-status").innerHTML = '<span style="color: red; font-weight: bold;">Sold Out</span>';
+                document.getElementById("add-to-cart-container").style.display = "none"; // Hide "Add to Cart"
+            } else {
+                document.getElementById("stock-status").innerHTML = '<span style="color: green; font-weight: bold;">In Stock</span>';
+                document.getElementById("add-to-cart-container").style.display = "block";
+            }
+
+            // Add to cart functionality
+            document.getElementById("add-to-cart").addEventListener("click", function () {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let existingProduct = cart.find(item => item.id == product.id);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Added to cart!");
+            });
+        })
+        .catch(error => console.error("Error loading product details:", error));
+});
+</script>
+<script src="cart.js"></script>
+
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>

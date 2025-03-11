@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "name": "Elegant Black Abaya",
+      "price": 2500,
+      "image": "assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp",
+      "description": "Beautiful black abaya with golden embroidery.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 2,
+      "name": "Modest Grey Abaya",
+      "price": 2700,
+      "image": "assets/images/abaya/beautiful-arab-middle-eastern-women-with-tradition-2023-11-27-05-03-17-utc.webp",
+      "description": "Comfortable grey abaya perfect for any occasion.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 3,
+      "name": "Luxury Pink Hijab",
+      "price": 800,
+      "image": "assets/images/abaya/woman-in-black-muslim-dress-gesturing-ok-at-the-do-2025-01-10-16-39-46-utc.webp",
+      "description": "Soft and elegant pink hijab for everyday wear.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": false
+    },
+    {
+      "id": 4,
+      "name": "Classic Navy Hijab",
+      "price": 900,
+      "image": "assets/images/abaya/young-muslim-woman-is-sewing-traditional-dress-2025-03-10-05-08-54-utc.webp",
+      "description": "Navy blue hijab made from high-quality chiffon.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 5,
+      "name": "Chiffon White Hijab",
+      "price": 850,
+      "image": "assets/images/abaya/portrait-of-two-beautiful-young-muslim-women-on-a-2025-02-21-05-48-37-utc.webp",
+      "description": "Navy blue hijab made from high-quality chiffon.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 6,
+      "name": "Golden Pearl Abaya",
+      "price": 3200,
+      "image": "assets/images/abaya/portrait-of-beautiful-young-muslim-woman-on-a-blac-2025-02-21-11-48-47-utc.webp",
+      "description": "Elegant abaya with pearl embellishments.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": false
+    },
+    {
+      "id": 7,
+      "name": "Premium Brown Hijab",
+      "price": 750,
+      "image": "assets/images/abaya/muslim-woman-holding-white-roses-2025-01-27-10-57-36-utc.webp",
+      "description": "Stylish brown hijab perfect for all outfits.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 8,
+      "name": "Royal Green Hijab",
+      "price": 1000,
+      "image": "assets/images/abaya/cropped-shot-of-young-muslim-woman-with-prayer-bea-2024-11-18-00-02-21-utc.webp",
+      "description": "Soft and rich green hijab with a luxurious feel.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 9,
+      "name": "Silk Maroon Hijab",
+      "price": 1100,
+      "image": "assets/images/abaya/colorful-abayas-lined-up-2025-03-09-05-09-02-utc.webp",
+      "description": "Maroon silk hijab for a classy and elegant look.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": true
+    },
+    {
+      "id": 10,
+      "name": "Casual Beige Hijab",
+      "price": 700,
+      "image": "assets/images/abaya/beautiful-arab-middle-eastern-women-with-tradition-2023-11-27-05-03-17-utc.webp",
+      "description": "Lightweight beige hijab for daily wear.",
+      "category": "Abaya",
+      "oldPrice": 2300,
+      "size": "60’’ x 40’’",
+      "color": "Black, White",
+      "stock": false
+    }
+  ]
+  
