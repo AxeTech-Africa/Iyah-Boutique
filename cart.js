@@ -1,35 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Update header and cart page on load
     updateCartHeader();
     updateCartPage();
 
-    // Global event delegation for Add to Cart button
+    // Add to Cart Event (Works on Shop & Product Details Page)
     document.addEventListener("click", function (event) {
-        // Check if the clicked element or one of its parents has the "add-to-cart" class
         let addBtn = event.target.closest(".add-to-cart");
         if (addBtn) {
             event.preventDefault();
-            let productElement = addBtn.closest(".product-wrap");
-            if (!productElement) return;
 
-            // Get product details from the product card. Ensure your product-wrap has data-id attribute!
-            let product = {
-                id: productElement.dataset.id, // e.g., <div class="product-wrap" data-id="1">
-                name: productElement.querySelector("h4 a").innerText,
-                price: parseFloat(
-                    productElement.querySelector(".product-price span").innerText
-                        .replace("Ksh", "")
-                        .trim()
-                ),
-                image: productElement.querySelector(".product-img img").src,
-                quantity: 1
-            };
+            let product = null;
+            let productElement = addBtn.closest(".product-wrap"); // Shop Page
 
-            addToCart(product);
+            if (productElement) {
+                // 🛒 Get product details from shop page
+                product = {
+                    id: productElement.dataset.id,
+                    name: productElement.querySelector("h4 a").innerText,
+                    price: parseFloat(productElement.querySelector(".product-price span").innerText.replace("Ksh", "").trim()),
+                    image: productElement.querySelector(".product-img img").src,
+                    quantity: 1
+                };
+            } else {
+                // 🛍 Get product details from product details page
+                let productId = getProductIdFromURL() || addBtn.dataset.id;
+                let productNameElem = document.getElementById("product-name");
+                let productPriceElem = document.getElementById("product-price");
+                let productImageElem = document.getElementById("product-image");
+                let quantityInput = document.querySelector(".cart-plus-minus-box");
+
+                if (productId && productNameElem && productPriceElem && productImageElem) {
+                    product = {
+                        id: productId,
+                        name: productNameElem.textContent.trim(),
+                        price: parseFloat(productPriceElem.textContent.replace("Ksh", "").trim()),
+                        image: productImageElem.src,
+                        quantity: parseInt(quantityInput?.value || 1, 10)
+                    };
+                }
+            }
+
+            if (product) {
+                addToCart(product);
+            }
         }
     });
 
-    // Global event delegation for Remove from Cart button (in header & cart page)
+    // Remove from Cart Event
     document.addEventListener("click", function (event) {
         let removeBtn = event.target.closest(".remove-from-cart");
         if (removeBtn) {
@@ -39,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Global event for quantity update in cart page
+    // Update Quantity in Cart
     document.addEventListener("input", function (event) {
         if (event.target.matches(".cart-quantity")) {
             let prodId = event.target.dataset.id;
@@ -48,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Global event for clearing cart (make sure the clear cart link has id="clear-cart")
+    // Clear Cart Event
     document.addEventListener("click", function (event) {
         if (event.target.matches("#clear-cart")) {
             event.preventDefault();
@@ -59,31 +75,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ----------------- Cart Functions -----------------
 
-// Add product to cart
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    // Check if the product already exists (by unique id)
+
     let existing = cart.find(item => item.id === product.id);
     if (existing) {
-        existing.quantity += 1;
+        existing.quantity += product.quantity;
     } else {
         cart.push(product);
     }
+
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartHeader();
     updateCartPage();
 }
 
-// Remove product from cart
+// Remove Product from Cart
 function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart = cart.filter(item => item.id !== productId);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    let updatedCart = cart.filter(item => item.id !== productId);
+
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
     updateCartHeader();
     updateCartPage();
 }
 
-// Update product quantity in cart
+// Update Product Quantity in Cart
 function updateCartQuantity(productId, quantity) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let product = cart.find(item => item.id === productId);
@@ -95,7 +112,7 @@ function updateCartQuantity(productId, quantity) {
     updateCartPage();
 }
 
-// Clear the entire cart
+// Clear the Entire Cart
 function clearCart() {
     localStorage.removeItem("cart");
     updateCartHeader();
@@ -104,28 +121,25 @@ function clearCart() {
 
 // ----------------- UI Update Functions -----------------
 
-// Update the cart information in the header
+// Update Cart Info in Header
 function updateCartHeader() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartCountElem = document.getElementById("cart-count");
-    let cartListElem = document.getElementById("cart-items-list");
-    let cartTotalElem = document.getElementById("cart-total");
+    
+    // Select all elements for desktop & mobile cart
+    let cartCountElems = document.querySelectorAll("#cart-count");
+    let cartListElems = document.querySelectorAll("#cart-items-list");
+    let cartTotalElems = document.querySelectorAll("#cart-total");
 
-    // Count unique products (as per your requirement)
-    let uniqueCount = cart.length;
-    // For total quantity (if needed), you can do:
-    // let totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+    let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    let totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-    if (cartCountElem) {
-        cartCountElem.textContent = `${uniqueCount} Items`;
-    }
+    cartCountElems.forEach(elem => {
+        elem.textContent = `${totalQuantity} Items`;
+    });
 
-    if (cartListElem) {
+    cartListElems.forEach(cartListElem => {
         cartListElem.innerHTML = "";
-        let totalAmount = 0;
         cart.forEach(item => {
-            let subtotal = item.price * item.quantity;
-            totalAmount += subtotal;
             cartListElem.innerHTML += `
                 <li class="single-shopping-cart">
                     <div class="shopping-cart-img">
@@ -141,13 +155,14 @@ function updateCartHeader() {
                 </li>
             `;
         });
-        if (cartTotalElem) {
-            cartTotalElem.textContent = `Ksh ${totalAmount.toFixed(2)}`;
-        }
-    }
+    });
+
+    cartTotalElems.forEach(elem => {
+        elem.textContent = `Ksh ${totalAmount.toFixed(2)}`;
+    });
 }
 
-// Update the cart page table
+// Update Cart Page
 function updateCartPage() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartTableBody = document.getElementById("cart-table-body");
@@ -174,11 +189,18 @@ function updateCartPage() {
                 </tr>
             `;
         });
+
         if (cartPageTotalElem) {
             cartPageTotalElem.textContent = `Ksh ${total.toFixed(2)}`;
         }
     }
 }
 
-// Ensure cart header updates on every page load
+// Helper function to get product ID from URL
+function getProductIdFromURL() {
+    let params = new URLSearchParams(window.location.search);
+    return params.get("id") || null;
+}
+
+// Ensure Cart Header Updates on Every Page Load
 document.addEventListener("DOMContentLoaded", updateCartHeader);
