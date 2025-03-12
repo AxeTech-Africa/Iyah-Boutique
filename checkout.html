@@ -59,34 +59,34 @@
 
                         <div class="col-xl-2 col-lg-3 position-relative">
                             <div class="header-right-wrap mt-40">
-<!-- cart start header -->
- 
-<div class="cart-wrap common-style">
-    <button class="cart-active">
-        <i class="la la-shopping-cart"></i>
-        <span class="count-style" id="cart-count">0 Items</span>
-    </button>
-    <div class="shopping-cart-content">
-        <div class="shopping-cart-top">
-            <h4>Your Cart</h4>
-            <a class="cart-close" href="#"><i class="la la-close"></i></a>
-        </div>
-        <ul id="cart-items-list">
-            <!-- Cart items will be inserted here dynamically -->
-        </ul>
-        <div class="shopping-cart-bottom">
-            <div class="shopping-cart-total">
-                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
-                </h4>
-            </div>
-            <div class="shopping-cart-btn btn-hover default-btn text-center">
-                <a class="black-color" href="cart.html">View Cart</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- cart end header -->
- 
+                                <!-- cart start header -->
+
+                                <div class="cart-wrap common-style">
+                                    <button class="cart-active">
+                                        <i class="la la-shopping-cart"></i>
+                                        <span class="count-style" id="cart-count">0 Items</span>
+                                    </button>
+                                    <div class="shopping-cart-content">
+                                        <div class="shopping-cart-top">
+                                            <h4>Your Cart</h4>
+                                            <a class="cart-close" href="#"><i class="la la-close"></i></a>
+                                        </div>
+                                        <ul id="cart-items-list">
+                                            <!-- Cart items will be inserted here dynamically -->
+                                        </ul>
+                                        <div class="shopping-cart-bottom">
+                                            <div class="shopping-cart-total">
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                                                </h4>
+                                            </div>
+                                            <div class="shopping-cart-btn btn-hover default-btn text-center">
+                                                <a class="black-color" href="cart.html">View Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cart end header -->
+
                                 <div class="search-wrap common-style ml-25">
                                     <button class="search-active">
                                         <i class="la la-search"></i>
@@ -142,7 +142,8 @@
                                         </ul>
                                         <div class="shopping-cart-bottom">
                                             <div class="shopping-cart-total">
-                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span></h4>
+                                                <h4>Subtotal <span class="shop-total" id="cart-total">Ksh 0.00</span>
+                                                </h4>
                                             </div>
                                             <div class="shopping-cart-btn btn-hover default-btn text-center">
                                                 <a class="black-color" href="cart.html">View Cart</a>
@@ -230,7 +231,8 @@
         </div>
         <!-- header end -->
 
-        <div class="breadcrumb-area bg-img" style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
+        <div class="breadcrumb-area bg-img"
+            style="background-image:url(assets/images/abaya/beautiful-young-woman-wearing-colored-abaya-2024-01-15-17-46-36-utc.webp);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>checkout page</h2>
@@ -272,8 +274,10 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="billing-info mb-20">
-                                            <label>Street Address <abbr class="required" title="required">*</abbr></label>
-                                            <input class="billing-address" id="address" placeholder="House number and street name" type="text">
+                                            <label>Street Address <abbr class="required"
+                                                    title="required">*</abbr></label>
+                                            <input class="billing-address" id="address"
+                                                placeholder="House number and street name" type="text">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -285,7 +289,8 @@
                                 </div>
                                 <div class="additional-info-wrap">
                                     <label>Order notes</label>
-                                    <textarea id="orderNotes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                    <textarea id="orderNotes"
+                                        placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -412,78 +417,55 @@
     </div>
     <!-- JS
 ============================================ -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-    
-    const firebaseConfig = {
-      apiKey: "AIzaSyAbHSGvq3lVc1IT6AHCvqKMsDD-vbx1sqI",
-      authDomain: "iyah-boutique.firebaseapp.com",
-      projectId: "iyah-boutique",
-      storageBucket: "iyah-boutique.appspot.com",
-      messagingSenderId: "255545038422",
-      appId: "1:255545038422:web:fe380a9f65f1cbd6fd0df7"
-    };
-    
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    
-    // Load Cart Items into Checkout Page
-    function loadCartItems() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let orderSummary = document.getElementById('order-summary');
-        let grandTotal = document.getElementById('grandTotal');
-        
-        orderSummary.innerHTML = '';
-        let totalAmount = 0;
-    
-        cart.forEach((item, index) => {
-            let itemTotal = item.price * item.quantity;
-            totalAmount += itemTotal;
-            orderSummary.innerHTML += `<ul><li>${item.name} x${item.quantity} <span>Ksh ${itemTotal}</span></li></ul>`;
-        });
-        
-        grandTotal.innerText = `Ksh ${totalAmount}`;
-    }
-    
-    document.addEventListener('DOMContentLoaded', loadCartItems);
-    
-    // Checkout via WhatsApp
+   <script>
     function checkoutWhatsApp() {
-        let firstName = document.getElementById('firstName').value;
-        let lastName = document.getElementById('lastName').value;
-        let phone = document.getElementById('phone').value;
-        let address = document.getElementById('address').value;
-        let city = document.getElementById('city').value;
-        let orderNotes = document.getElementById('orderNotes').value;
-        
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        if (cart.length === 0) {
-            alert("Your cart is empty!");
-            return;
-        }
-        
-        let orderDetails = `*Order Details:*
-    `;
-        cart.forEach((item, index) => {
-            orderDetails += `${index + 1}. ${item.name} x${item.quantity} - Ksh ${item.price * item.quantity}\n`;
-        });
-        
-        let totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        orderDetails += `\n*Total: Ksh ${totalAmount}*\n\n`;
-        
-        let customerDetails = `*Customer Details:*
-    Name: ${firstName} ${lastName}\nPhone: ${phone}\nAddress: ${address}, ${city}\nNotes: ${orderNotes}\n\n`;
-        
-        let message = encodeURIComponent(orderDetails + customerDetails);
-        let whatsappNumber = '254715699966'; // Replace with your WhatsApp number
-        
-        window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
-        
-        // Clear cart after order
-        localStorage.removeItem('cart');
+    // Get billing details
+    let firstName = document.getElementById("firstName").value.trim();
+    let lastName = document.getElementById("lastName").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let city = document.getElementById("city").value.trim();
+    let orderNotes = document.getElementById("orderNotes").value.trim();
+
+    // Validate required fields
+    if (!firstName || !lastName || !phone || !address || !city) {
+        alert("Please fill in all required fields.");
+        return;
     }
-    </script>
+
+    // Get cart details from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+
+    // Construct order message
+    let message = `*New Order from ${firstName} ${lastName}*\n\n`;
+    message += `📞 *Phone:* ${phone}\n🏡 *Address:* ${address}, ${city}\n`;
+    if (orderNotes) message += `📝 *Order Notes:* ${orderNotes}\n\n`;
+
+    message += `🛍 *Order Summary:*\n`;
+    let totalAmount = 0;
+    cart.forEach((item, index) => {
+        let subtotal = item.price * item.quantity;
+        totalAmount += subtotal;
+        message += `${index + 1}. ${item.name} (Size: ${item.size}, Color: ${item.color})\n   🔹 Ksh ${item.price} x ${item.quantity} = *Ksh ${subtotal}*\n\n`;
+    });
+
+    message += `💰 *Total: Ksh ${totalAmount}*\n\n`;
+    message += `✅ *Thank you for shopping with us!*`;
+
+    // Encode the message for a WhatsApp link
+    let encodedMessage = encodeURIComponent(message);
+    let whatsappNumber = "254715699966"; // Change this to the business's WhatsApp number
+    let whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Redirect to WhatsApp
+    window.location.href = whatsappLink;
+}
+
+   </script>
     <script src="cart.js"></script>
 
 

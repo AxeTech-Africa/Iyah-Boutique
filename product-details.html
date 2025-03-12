@@ -261,15 +261,33 @@
 
                             <div class="pro-details-size">
                                 <span>Size:</span>
-                                <div class="pro-details-size-content">
+                                <div class="pro-details-size-content" id="product-size">
                                     <ul>
-                                        <li><a href="#">S</a></li>
-                                        <li><a href="#">M</a></li>
-                                        <li><a href="#">XL</a></li>
-                                        <li><a href="#">XXL</a></li>
+                                        <li>56</li>
+                                        <li>58</li>
                                     </ul>
                                 </div>
                             </div>
+                            
+                            <div class="pro-details-color-wrap">
+                                <span>Color:</span>
+                                <div class="pro-details-color-content" id="product-color">
+                                    <ul>
+                                        <li>Black</li>
+                                        <li>White</li>
+                                        <li>Blue</li>
+                                        <li>Mauve</li>
+                                        <li>Pale-Pink</li>
+                                        <li>Purple</li>
+                                        <li>Brown</li>
+                                        <li>Rose</li>
+                                        <li>Beige</li>
+                                        <li>Baby-Pink</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            
 
                             <div class="pro-details-price-wrap">
                                 <div class="product-price">
@@ -294,6 +312,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- end -->
 
         <div class="description-review-wrapper pb-90">
             <div class="container">
@@ -530,8 +550,8 @@
 
                     // Update specification details
                     document.getElementById("product-spec-name").textContent = product.name;
-                    document.getElementById("product-spec-size").textContent = product.size;
-                    document.getElementById("product-spec-color").textContent = product.color;
+                    document.getElementById("product-spec-size").textContent = product.sizes;
+                    document.getElementById("product-spec-color").textContent = product.colors;
 
                     // Handle stock status
                     if (!product.stock) {
@@ -546,6 +566,28 @@
                 })
                 .catch(error => console.error("Error loading product details:", error));
         });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Function to handle selection
+    function handleSelection(containerId) {
+        document.querySelectorAll(`#${containerId} ul li`).forEach(item => {
+            item.addEventListener("click", function () {
+                // Remove 'selected' class from all items in the same category
+                document.querySelectorAll(`#${containerId} ul li`).forEach(el => el.classList.remove("selected"));
+                // Add 'selected' class to the clicked item
+                this.classList.add("selected");
+            });
+        });
+    }
+
+    // Apply selection handling to both size and color
+    handleSelection("product-size");
+    handleSelection("product-color");
+});
+
+
+
     </script>
     <script src="cart.js"></script>
 

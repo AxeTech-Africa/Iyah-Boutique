@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     name: productElement.querySelector("h4 a").innerText,
                     price: parseFloat(productElement.querySelector(".product-price span").innerText.replace("Ksh", "").trim()),
                     image: productElement.querySelector(".product-img img").src,
-                    quantity: 1
+                    quantity: 1,
+                    size: "Not Selected",
+                    color: "Not Selected"
                 };
             } else {
                 // 🛍 Get product details from product details page
@@ -28,13 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 let productImageElem = document.getElementById("product-image");
                 let quantityInput = document.querySelector(".cart-plus-minus-box");
 
+                // ✅ NEW CODE TO GET SELECTED SIZE & COLOR
+                let selectedSizeElem = document.querySelector("#product-size .selected");
+                let selectedColorElem = document.querySelector("#product-color .selected");
+
+                let size = selectedSizeElem ? selectedSizeElem.textContent.trim() : "Not Selected";
+                let color = selectedColorElem ? selectedColorElem.textContent.trim() : "Not Selected";
+
                 if (productId && productNameElem && productPriceElem && productImageElem) {
                     product = {
-                        id: productId,
+                        id: productId + "-" + size + "-" + color, // Unique ID for variations
                         name: productNameElem.textContent.trim(),
                         price: parseFloat(productPriceElem.textContent.replace("Ksh", "").trim()),
                         image: productImageElem.src,
-                        quantity: parseInt(quantityInput?.value || 1, 10)
+                        quantity: parseInt(quantityInput?.value || 1, 10),
+                        size: size,
+                        color: color
                     };
                 }
             }
@@ -124,7 +135,7 @@ function clearCart() {
 // Update Cart Info in Header
 function updateCartHeader() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    
+
     // Select all elements for desktop & mobile cart
     let cartCountElems = document.querySelectorAll("#cart-count");
     let cartListElems = document.querySelectorAll("#cart-items-list");
@@ -147,6 +158,7 @@ function updateCartHeader() {
                     </div>
                     <div class="shopping-cart-title">
                         <h4><a href="#">${item.name}</a></h4>
+                        <span>Size: ${item.size}, Color: ${item.color}</span><br>
                         <span>Ksh ${item.price} x ${item.quantity}</span>
                     </div>
                     <div class="shopping-cart-delete">
@@ -178,13 +190,15 @@ function updateCartPage() {
                 <tr>
                     <td class="product-thumbnail"><a href="#"><img src="${item.image}" alt="${item.name}"></a></td>
                     <td class="product-name"><a href="#">${item.name}</a></td>
+                    <td class="product-size">${item.size}</td>
+                    <td class="product-color">${item.color}</td>
                     <td class="product-price-cart"><span class="amount">Ksh ${item.price}</span></td>
                     <td class="product-quantity">
                         <input class="cart-quantity" type="number" value="${item.quantity}" data-id="${item.id}" min="1">
                     </td>
                     <td class="product-subtotal">Ksh ${subtotal.toFixed(2)}</td>
                     <td class="product-remove">
-                        <a href="#" class="remove-from-cart" data-id="${item.id}"><i class="la la-close"></i></a>
+                        <a href="#" class="remove-from-cart" data-id="${item.id}"><i class="la la-trash"></i></a>
                     </td>
                 </tr>
             `;
@@ -195,6 +209,32 @@ function updateCartPage() {
         }
     }
 }
+
+// Load Cart Items into Checkout Page
+function loadCartItems() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let orderSummary = document.getElementById('order-summary');
+    let grandTotal = document.getElementById('grandTotal');
+
+    orderSummary.innerHTML = '';
+    let totalAmount = 0;
+
+    cart.forEach((item) => {
+        let itemTotal = item.price * item.quantity;
+        totalAmount += itemTotal;
+        orderSummary.innerHTML += `
+    <ul>
+        <li>${item.name} (Size: ${item.size}, Color: ${item.color}) x${item.quantity} 
+            <span>Ksh ${itemTotal}</span>
+        </li>
+    </ul>`;
+    });
+
+    grandTotal.innerText = `Ksh ${totalAmount}`;
+}
+
+document.addEventListener('DOMContentLoaded', loadCartItems);
+
 
 // Helper function to get product ID from URL
 function getProductIdFromURL() {

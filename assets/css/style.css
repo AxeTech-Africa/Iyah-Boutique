@@ -14981,3 +14981,76 @@ h3.cart-page-title {
     padding-bottom: 40px;
   }
 }
+
+/* Ensure proper display for both size and color */
+.pro-details-size-content ul,
+.pro-details-color-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Keep size selection styling */
+.pro-details-size-content ul li {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Selected size */
+.pro-details-size-content ul li.selected {
+    background: green;
+    color: white;
+}
+
+.pro-details-color-content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pro-details-color-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap neatly */
+  gap: 10px; /* Adds space between items */
+  padding: 10px;
+  background: #f8f8f8; /* Light background to define the section */
+  border-radius: 5px; /* Soft rounded edges */
+  max-width: 300px; /* Adjust width to fit neatly */
+}
+
+.pro-details-color-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap properly */
+  gap: 8px; /* Space between colors */
+}
+
+.pro-details-color-content ul li {
+  padding: 0; /* Remove extra padding */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove rounded corners */
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: nowrap;
+  color: #333; /* Make text visible */
+}
+
+
+
+/* Selected color - only change text color */
+.pro-details-color-content ul li.selected {
+    color: green;
+    font-weight: bold;
+}
+
+
