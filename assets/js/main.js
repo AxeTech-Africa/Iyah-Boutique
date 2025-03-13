@@ -683,22 +683,43 @@
     /*---------------------
         Price slider
     --------------------- */
-    var sliderrange = $('#slider-range');
-    var amountprice = $('#amount');
-    $(function () {
-        sliderrange.slider({
-            range: true,
-            min: 0,
-            max: 1200,
-            values: [0, 800],
-            slide: function (event, ui) {
-                amountprice.val("$" + ui.values[0] + " - $" + ui.values[1]);
+    document.getElementById("filter-btn").addEventListener("click", function () {
+        let selectedRange = document.getElementById("price-filter").value;
+        let products = document.querySelectorAll(".product-wrap");
+    
+        products.forEach(product => {
+            let price = parseInt(product.querySelector(".product-price span").innerText.replace("Ksh ", "").replace(",", ""));
+            
+            // Show all if "all" is selected
+            if (selectedRange === "all") {
+                product.style.display = "block";
+            } else {
+                let [min, max] = selectedRange.split("-").map(Number);
+                if (price >= min && price <= max) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
             }
         });
-        amountprice.val("$" + sliderrange.slider("values", 0) +
-            " - $" + sliderrange.slider("values", 1));
     });
-
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const inStockCountEl = document.getElementById("in-stock-count");
+        const outStockCountEl = document.getElementById("out-stock-count");
+    
+        fetch("products.json")
+            .then(response => response.json())
+            .then(products => {
+                let inStockCount = products.filter(p => p.stock === true).length;
+                let outStockCount = products.filter(p => p.stock === false).length;
+    
+                inStockCountEl.textContent = inStockCount;
+                outStockCountEl.textContent = outStockCount;
+            })
+            .catch(error => console.error("Error loading products:", error));
+    });
+    
 
     /*--- checkout toggle function ----*/
     $('.checkout-click1').on('click', function (e) {
