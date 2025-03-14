@@ -15159,3 +15159,13 @@ h3.cart-page-title {
 .whatsapp-icon {
   color: #25D366 !important; /* WhatsApp Green */
 }
+
+
+
+
+.disabled {
+  text-decoration: line-through;
+  color: grey;
+  pointer-events: none;
+  opacity: 0.5;
+}

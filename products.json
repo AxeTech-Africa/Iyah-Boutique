@@ -18,7 +18,7 @@
       "description": "Comfortable bright lilac abaya perfect for any occasion.",
       "category": "Abaya",
       "sizes": "56, 58 (cm)",
-      "colors": " Lilac",
+      "colors": " Lilac,Mauve,Pale-pink",
       "stock": true
     },
     {
@@ -30,7 +30,7 @@
       "category": "Abaya",
       "oldPrice": 15000,
       "sizes": "56, 58 (cm)",
-      "colors": " Pale-Pink",
+      "colors": "Lilac,Mauve, Pale-Pink",
       "stock": true
     },
     {
@@ -64,7 +64,7 @@
       "description": "Elegant black abaya with a touch of luxury.",
       "category": "Abaya",
       "oldPrice": 14500,
-      "sizes": "56, 58 (cm)",
+      "sizes": "58 (cm)",
       "colors": "Black",
       "stock": true
     },
@@ -77,7 +77,7 @@
       "category": "Abaya",
       "oldPrice": 14500,
       "sizes": "56, 58 (cm)",
-      "colors": "Brown,",
+      "colors": "Baby-pink,brown,Old-rose",
       "stock": true
     },
     {
@@ -89,7 +89,7 @@
       "category": "Abaya",
       "oldPrice": 14500,
       "sizes": "56, 58 (cm)",
-      "colors": "Old-rose",
+      "colors": "Baby-pink,brown,Old-rose",
       "stock": true
     },
     {
@@ -101,7 +101,7 @@
       "category": "Abaya",
       "oldPrice": 14000,
       "sizes": "56, 58 (cm)",
-      "colors": "Baby-pink",
+      "colors": "Baby-pink,brown,Old-rose",
       "stock": true
     },
     {
@@ -124,7 +124,7 @@
       "description": "Green Nisa abaya for a classy and elegant look.",
       "category": "Abaya",
       "oldPrice": 14000,
-      "sizes": "56, 58 (cm)",
+      "sizes": "56,58,60 (cm)",
       "colors": "Green",
       "stock": true
     },
@@ -136,7 +136,7 @@
       "description": "Maroon Nisa abaya for a classy and elegant look.",
       "category": "Abaya",
       "oldPrice": 14000,
-      "sizes": "56, 58 (cm)",
+      "sizes": "56,58,60 (cm)",
       "colors": "Maroon",
       "stock": true
     },

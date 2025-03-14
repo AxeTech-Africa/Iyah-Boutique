@@ -244,3 +244,51 @@ function getProductIdFromURL() {
 
 // Ensure Cart Header Updates on Every Page Load
 document.addEventListener("DOMContentLoaded", updateCartHeader);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+
+    // Load the products JSON file
+    fetch("products.json")
+        .then(response => response.json())
+        .then(products => {
+            const product = products.find(p => p.id == productId);
+            if (!product) return;
+
+            // Clean and extract available sizes
+            const availableSizes = product.sizes
+                .replace(/\(cm\)/gi, "") // Remove (cm)
+                .split(",") // Split by comma
+                .map(size => size.trim());
+
+            // Get all size elements and disable unavailable ones
+            document.querySelectorAll("#product-size ul li").forEach(sizeEl => {
+                const sizeText = sizeEl.textContent.trim();
+                if (!availableSizes.includes(sizeText)) {
+                    sizeEl.classList.add("disabled");
+                } else {
+                    sizeEl.classList.remove("disabled"); // Ensure available sizes are not disabled
+                }
+            });
+
+            // Clean and extract available colors
+            const availableColors = product.colors
+                .split(",") // Split by comma
+                .map(color => color.trim().toLowerCase()); // Trim spaces and normalize case
+
+            // Get all color elements and disable unavailable ones
+            document.querySelectorAll("#product-color ul li").forEach(colorEl => {
+                const colorText = colorEl.textContent.trim().toLowerCase();
+                if (!availableColors.includes(colorText)) {
+                    colorEl.classList.add("disabled");
+                } else {
+                    colorEl.classList.remove("disabled"); // Ensure available colors are not disabled
+                }
+            });
+        })
+        .catch(error => console.error("Error loading products:", error));
+});
+
