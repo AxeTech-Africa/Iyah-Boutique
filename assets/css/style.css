@@ -15150,3 +15150,12 @@ h3.cart-page-title {
   color: #b7833f;
   font-weight: 500;
 }
+
+
+.instagram-icon {
+  color: #E4405F !important; /* Instagram Pinkish-Red */
+}
+
+.whatsapp-icon {
+  color: #25D366 !important; /* WhatsApp Green */
+}
