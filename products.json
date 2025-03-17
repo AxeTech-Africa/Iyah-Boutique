@@ -31,7 +31,7 @@
       "oldPrice": 15000,
       "sizes": "56, 58 (cm)",
       "colors": "Lilac,Mauve, Pale-Pink",
-      "stock": true
+      "stock": false
     },
     {
       "id": 4,
@@ -40,7 +40,7 @@
       "image": "assets/images/abayas/iyah abaya.webp",
       "description": "Stylish blue abaya with a modern design.",
       "category": "Abaya",
-      "sizes": "56, 58 (cm)",
+      "sizes": "58 (cm)",
       "colors": "Blue",
       "stock": true
     },
